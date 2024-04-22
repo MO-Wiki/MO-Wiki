@@ -1,4 +1,4 @@
-mkdocs==1.6.0
+mkdocs==1.5.3
 mkdocs-material==9.5.18
 click==7.0
 Jinja2==2.11.1
