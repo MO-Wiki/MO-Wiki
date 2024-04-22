@@ -1,0 +1,62 @@
+name: MO Wiki Build
+
+permissions:
+  contents: write
+
+on:
+  push:
+    branches: ["main"]
+
+  pull_request:
+    branches: ["main"]
+
+jobs:
+  ubuntu_build:
+    name: Building Mk-Docs on latest Ubuntu
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout project code
+        uses: actions/checkout@v4
+
+      - name: Check Python & Pip version
+        run: |
+          python3 -v
+          pip3 -V
+
+      - name: Install requirements
+        run: pip3 install -r requirements.txt
+
+      - name: Build static web files
+        run: python3 -m mkdocs build
+
+      - name: Deploy to Github pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages
+          folder: build
+
+  windows_build:
+    name: Building Mk-Docs on latest Windows
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout project code
+        uses: actions/checkout@v4
+
+      - name: Check Python & Pip version
+        run: |
+          python -v
+          pip -V
+
+      - name: Install requirements
+        run: pip install -r requirements.txt
+
+      - name: Build static web files
+        run: python -m mkdocs build
+
+      - name: Deploy to Github pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages
+          folder: build

@@ -1,2 +1,2 @@
-# MO-Wiki
-世界上规模和影响最大的中学生数学学科竞赛百科😀
+# 欢迎来到 MO Wiki
+🌟 Wiki of MO / IMO for everyone. （某大型游戏线上攻略，内含可爱代数魔法）
