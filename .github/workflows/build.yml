@@ -44,6 +44,9 @@ jobs:
       - name: Checkout project code
         uses: actions/checkout@v4
 
+      - name: Setup rsync
+        run: choco install rsync -y
+
       - name: Check Python & Pip version
         run: |
           python -v
