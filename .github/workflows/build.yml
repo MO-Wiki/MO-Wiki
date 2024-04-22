@@ -35,31 +35,4 @@ jobs:
         with:
           branch: gh-pages
           folder: site
-
-  windows_build:
-    name: Building Mk-Docs on latest Windows
-    runs-on: windows-latest
-
-    steps:
-      - name: Checkout project code
-        uses: actions/checkout@v4
-
-      - name: Setup rsync
-        run: choco install rsync -y
-
-      - name: Check Python & Pip version
-        run: |
-          python -v
-          pip -V
-
-      - name: Install requirements
-        run: pip install -r requirements.txt
-
-      - name: Build static web files
-        run: python -m mkdocs build
-
-      - name: Deploy to Github pages
-        uses: JamesIves/github-pages-deploy-action@v4
-        with:
-          branch: gh-pages
-          folder: site
+          
