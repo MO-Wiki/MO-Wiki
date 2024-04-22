@@ -1,1 +1,3 @@
 site_name: MO Wiki
+theme:
+  name: material
