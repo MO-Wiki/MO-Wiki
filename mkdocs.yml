@@ -9,7 +9,7 @@ theme:
     - media: "(prefers-color-scheme: light)"
       scheme: default
       primary: white
-      accent: red
+      accent: pink
       toggle:
         icon: material/weather-sunny
         name: Switch to dark mode
@@ -17,7 +17,7 @@ theme:
     # Palette toggle for dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: pink
+      primary: black
       accent: black
       toggle:
         icon: material/weather-night
