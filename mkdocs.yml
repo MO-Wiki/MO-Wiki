@@ -1,7 +1,6 @@
 site_name: MO Wiki
 theme:
-  name: null
-  custom_dir: 'mkdocs-material/material/templates'
+  name: material
   static_templates:
     - 404.html
   language: 'zh'
