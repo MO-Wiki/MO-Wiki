@@ -34,4 +34,4 @@ jobs:
         with:
           folder: site
           token: ${{secrets.DEPLOY_TOKEN}}
-          ssh_key: ${{secrets.DEPLOY_KEY}}
+          ssh-key: ${{secrets.DEPLOY_KEY}}
