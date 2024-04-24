@@ -33,4 +33,5 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4.6.0
         with:
           folder: site
-          token: ${{secrets.XK2013_GITHUB_TOKEN}}
+          token: ${{secrets.DEPLOY_TOKEN}}
+          ssh_key: ${{secrets.DEPLOY_KEY}}
